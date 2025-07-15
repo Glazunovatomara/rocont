@@ -279,3 +279,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const checkbox = document.querySelector(".header-menu-checkbox");
+const burger = document.querySelector(".header-nav");
+const itemsBurger = document.querySelectorAll(".nav-item-link");
+
+function closeBurger(event) {
+    let index = Array.from(itemsBurger).indexOf(event.target);
+    let num = itemsBurger.length - 1;
+    if (index <= num && index != -1) {
+      checkbox.checked = false;
+    }
+  }
+  burger.addEventListener("click", closeBurger);
