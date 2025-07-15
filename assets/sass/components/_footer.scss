@@ -1,0 +1,83 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.footer {
+  @include mixin.container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @media screen and (max-width:640px) {
+    flex-direction: column-reverse;
+  }
+
+  &-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 8px;
+    flex-grow: 0.5;
+  
+    @media screen and (max-width:640px) {
+      row-gap: 32px;
+    }
+  
+    @media screen and (max-width:320px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @media screen and (max-width:640px) {
+      gap: 32px;
+    }
+  }
+  &-logo {
+    align-self: flex-start;
+  
+    @media screen and (max-width:640px) {
+      margin-bottom: 32px;
+    }
+  }
+  &-arrea {
+    display: flex;
+    flex-grow: 1;
+    margin-right: 32px;
+    justify-content: space-between;
+  
+    @media screen and (max-width:640px) {
+      flex-direction: column;
+      width: 100%;
+      gap: 32px;
+      margin-right: 0;
+    }
+  }
+  &-line {
+    display: none;
+  
+    @media screen and (max-width:640px) {
+      display: block;
+      border: 2px solid variables.$black;
+    }
+  }
+}
+.footer-item,
+.footer-info-text,
+.footer-info > a {
+  @include mixin.text-mini;
+  color: variables.$black;
+  color: pointer;
+}
+.footer-item,
+.footer-info > a {
+  cursor: pointer;
+}
+.footer-item:hover,
+.footer-info > a:hover {
+  color: variables.$green;
+  transition: variables.$transition-speed;
+}

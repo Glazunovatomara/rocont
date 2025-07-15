@@ -1,0 +1,18 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+.main {
+    background-color: variables.$grey;
+    padding: 8px 10px 0;
+}

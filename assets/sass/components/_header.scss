@@ -1,0 +1,138 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+@use "../base/fonts";
+
+.header {
+  position: relative;
+  @include mixin.container;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  background-color: variables.$white;
+  border: none;
+  border-radius: 24px;
+  color: variables.$black;
+
+  @media screen and (max-width:680px) {
+    padding: 8px 0 16px;
+    background-color: #ffffff00;
+  }
+
+}
+.header-menu-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.header-menu-burger {
+  position: relative;
+  display: flex;
+  width: 100%;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  background-color: variables.$green;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+.header-menu-span, 
+.header-menu-span::after,
+.header-menu-span::before {
+  position: absolute;
+  top: 17px;
+  display: block;
+  background-color: variables.$white;
+  width: 18px;
+  height: 2px;
+  border-radius: 10px;
+  transition-duration:0.25s;
+}
+.header-menu-span::after {
+  content: "";
+  width: 100%;
+  top: 5px;
+  transition-duration:0.25s;
+}
+.header-menu-span::before {
+  content: "";
+  width: 100%;
+  top: -5px;
+  transition-duration:0.25s;
+}
+.header-menu-checkbox:checked ~ 
+.header-menu-burger >
+.header-menu-span {
+  transform: rotate(45deg);
+  transition-duration: 0.25s;
+}
+
+.header-menu-checkbox:checked ~ 
+.header-menu-burger >
+.header-menu-span::before {
+  transition-duration: 0.25s;
+  top: 0;
+}
+.header-menu-checkbox:checked ~
+.header-menu-burger >
+.header-menu-span::after {
+  transform: rotate(90deg);
+  top: 0;
+  transition-duration: 0.25s;
+}
+.burger-checkbox,
+.header-menu-burger {
+  @media screen and (min-width: 681px) {
+    display: none;
+  }
+}
+.header-nav {
+  @media screen and (max-width:680px) {
+    position: absolute;
+    top: 67px;
+    right: 0;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: variables.$white;
+    transform: translateX(calc(100vw - 10px));
+    transition: transform 0.25s ease-out;
+    z-index: 10;
+
+  }
+}
+.header-menu-checkbox:checked ~ .header-nav {
+  transform: translateX(0);
+}
+.nav-items {
+  display: flex;
+  max-width: 547px;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
+  list-style-type:none;
+
+  @media screen and (max-width:680px) {
+    flex-direction: column;
+  }
+}
+.nav-item-link {
+  @include mixin.text-mini;
+  color: variables.$black;
+  cursor: pointer;
+}
+.nav-item:nth-child(4) >.nav-item-link{
+  background-color: variables.$green;
+  color: variables.$white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 40px;
+  @media screen and (max-width:680px) {
+    padding: 0;
+    background-color: variables.$white;
+    color: variables.$green;
+  }
+ }

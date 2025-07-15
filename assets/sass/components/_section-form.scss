@@ -1,0 +1,205 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+.FormSection {
+    @include mixin.container;
+    @include mixin.container-indent;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 64px;
+    gap: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 24px;
+    background-color: variables.$green;
+    color: variables.$white;
+    z-index: 1;
+
+    @media screen and (max-width:960px) {
+        padding: 48px 96px 48px 48px;
+    }
+    @media screen and (max-width:640px) {
+        padding: 24px;
+        flex-direction: column;
+        gap: 24px;
+    }
+    @media screen and (max-width:480px) {
+    }
+    @media screen and (max-width:320px) {
+    }
+}
+.FormSection-info {
+    max-width: 430px;
+    width: 100%;
+
+    @media screen and (max-width:960px) {
+        max-width: 297px;
+    }
+    @media screen and (max-width:640px) {
+        max-width: 400px;
+    }
+    @media screen and (max-width:480px) {
+    }
+    @media screen and (max-width:320px) {
+    }
+}
+.FormSection-info-title {
+    @include mixin.subtitle;
+    padding-bottom: 32px;
+
+    @media screen and (max-width:960px) {
+        padding-bottom: 24px;
+    }
+}
+.FormSection-info-items {
+    @include mixin.text;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type:none;
+}
+.FormSection-info-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.FormSection-info-item::before {
+    width: 24px;
+    height: 24px;
+    content: url(/assets/icons/arrow.svg);
+    border: none;
+    border-radius: 50%;
+    background-color: variables.$white;
+}
+.FormSection-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    width: 100%;
+    gap: 8px;
+    @media screen and (max-width:960px) {
+        max-width: 416px;
+    }
+    @media screen and (max-width:640px) {
+        max-width: 572px;
+    }
+}
+.FormSection-form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media screen and (max-width:640px) {
+        flex-direction: row;
+    }
+    @media screen and (max-width:320px) {
+        flex-wrap: wrap;
+    }
+}
+.FormSection-form-input{
+    width: 100%;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 40px;
+    color: variables.$green;
+
+    &::placeholder {
+        @include mixin.text-mini;
+    }
+}
+.FormSection-form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px variables.$green;
+}
+.FormSection-form-input.is-invalid {
+    border: 2px solid #dc3545;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.FormSection-form-button {
+    @include mixin.button;
+    gap: 8px;
+    max-width: 192px;
+    background-color: variables.$white;
+    color:variables.$black;
+
+    @media screen and (max-width:320px) {
+        max-width: 252px;
+        justify-content: space-between;
+    }
+}
+.FormSection-form-buttonIcon {
+    background-color: variables.$green;
+    border: none;
+    border-radius: 50px;
+    stroke: variables.$white;
+}
+
+.FormSection-form-consent {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 10px;
+}
+.FormSection-form-consentLabel{
+    @include mixin.subtext;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+
+    @media screen and (max-width:640px) {
+        padding-bottom: 16px;
+    }
+}
+
+.FormSection-form-consentInput.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.FormSection-form-customCheckbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid variables.$white;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    flex-shrink: 0; 
+    transition: all variables.$transition-speed ease-in-out;
+    background-color: #ffffff00;
+}
+
+
+.FormSection-form-consentInput:checked + .FormSection-form-consentLabel .FormSection-form-customCheckbox {
+    content: '';
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image: url(/assets/icons/consent.svg);
+}
+
+.FormSection-form-consentInput.is-invalid + .FormSection-form-consentLabel .FormSection-form-customCheckbox {
+    border-color: #ff5b6b;
+}
+.FormSection-form-errors{
+    @include mixin.subtext;
+    color: #ffa0a9;
+}
+.FormSection-form-success {
+    @include mixin.subtext;
+    color: variables.$white;
+}

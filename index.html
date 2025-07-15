@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocont</title>
+    <link rel="shortcut icon" href="./assets/icons/favicon.svg" type="image/svg">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+    <main class="main">
+    <header class="header">
+        <img src="./assets/icons/logo.svg" alt="логотип">
+        <input type="checkbox" id="burger-checkbox" class="header-menu-checkbox">
+        <label for="burger-checkbox" class="header-menu-burger">
+            <span class="header-menu-span"></span>
+        </label>
+        <nav class="header-nav">
+            <ul class="nav-items">
+                <li class="nav-item"><a class="nav-item-link" href="#">О системе</a></li>
+                <li class="nav-item"><a class="nav-item-link" href="#">Архитектура</a></li>
+                <li class="nav-item"><a class="nav-item-link" href="#">Мнения</a></li>
+                <li class="nav-item"><a class="nav-item-link" href="#">Попробовать</a></li>
+                <li class="nav-item"><a class="nav-item-link" href="#">Для своих</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-hero">
+        <video class="section-hero-video" autoplay muted loop playsinline>
+            <source src="./assets/video/hero-section-video.mp4">
+        </video>
+        <div class="section-hero-content">
+            <h1 class="section-hero-title">
+                Просто потому<br>
+                что можем
+            </h1>
+            <p class="section-hero-text">Мы сделали это средство не ради прибыли, <br class="text-decor">а из любви к красивым словам. Один стик <br class="text-decor">в день — и вы чувствуете, что делаете что-то важное. Что именно — решать вам.</p>
+            <button class="section-hero-button">
+                Попробовать просто так 
+                <svg class="section-hero-button-icon" width="48" height="20" viewBox="0 0 48 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34 0V0C34 5.52285 38.4772 10 44 10V10" stroke="#1F8B48" stroke-width="2"/>
+                    <path d="M33.875 20V20C33.875 14.4772 38.3522 10 43.875 10H44H-10" stroke="#1F8B48" stroke-width="2"/>
+                </svg>
+            </button>
+        </div>
+        <div class="section-hero-legal-info">
+            <p class="section-hero-legal-text">Сертификат есть. Но это не точно.</p>
+            <p class="section-hero-legal-certificat">СГР №AM.01.01 .01.003.R.00 o47 4.06.24</p>
+        </div>
+    </section>
+    <section class="slider">
+        <div class="slider-info">
+            <h2 class="slider-info-title">Это — не совсем то, что вы думаете</h2>
+            <div class="slider-info-buttons">
+                <button class="slider-info-button" id="prev" data-element="button" data-modifier="prev" aria-label="Предыдущая картинка">
+                    <svg class="slider-info-button-icon" width="48" height="20" viewBox="0 0 48 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34 0V0C34 5.52285 38.4772 10 44 10V10"  stroke-width="2"/>
+                        <path d="M33.875 20V20C33.875 14.4772 38.3522 10 43.875 10H44H-10" stroke-width="2"/>
+                    </svg>
+                </button>
+                <button class="slider-info-button" id="next" data-element="button" data-modifier="next" aria-label="Следующая картинка">
+                    <svg class="slider-info-button-icon " width="48" height="20" viewBox="0 0 48 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34 0V0C34 5.52285 38.4772 10 44 10V10"  stroke-width="2"/>
+                        <path d="M33.875 20V20C33.875 14.4772 38.3522 10 43.875 10H44H-10" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="slider-gallery" data-component="slider-gallery">
+            <div class="slider-gallery-viewport">
+                <div class="slider-gallery-track" id="track">
+                    <div class="slider-gallery-item" data-item-index="0">
+                        <img class="slider-gallery-img"  src="./assets/img/1.jpg" alt="">
+                        <div class="slider-gallery-item-overlay">
+                            <div class="slider-gallery-item-info">
+                                <h3 class="slider-gallery-item-title">Немного упругости</h3>
+                                <p class="slider-gallery-item-text">Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-gallery-item" data-item-index="1">
+                        <img class="slider-gallery-img" src="./assets/img/2.jpg" alt="">
+                        <div class="slider-gallery-item-overlay">
+                            <div class="slider-gallery-item-info">
+                                <h3 class="slider-gallery-item-title">Немного упругости</h3>
+                                <p class="slider-gallery-item-text">Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-gallery-item" data-item-index="2">
+                        <img class="slider-gallery-img" src="./assets/img/3.jpg" alt="">
+                        <div class="slider-gallery-item-overlay">
+                            <div class="slider-gallery-item-info">
+                                <h3 class="slider-gallery-item-title">Немного упругости</h3>
+                                <p class="slider-gallery-item-text">Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-gallery-item" data-item-index="3">
+                        <img class="slider-gallery-img" src="./assets/img/4.jpg" alt="">
+                        <div class="slider-gallery-item-overlay">
+                            <div class="slider-gallery-item-info">
+                                <h3 class="slider-gallery-item-title">Немного упругости</h3>
+                                <p class="slider-gallery-item-text">Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-gallery-item" data-item-index="4">
+                        <img class="slider-gallery-img" src="./assets/img/5.jpg" alt="">
+                        <div class="slider-gallery-item-overlay">
+                            <div class="slider-gallery-item-info">
+                                <h3 class="slider-gallery-item-title">Немного упругости</h3>
+                                <p class="slider-gallery-item-text">Чуть-чуть сияния, и ощущение, что вы о себе позаботились</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="FormSection">
+        <div class="FormSection-info">
+            <h2 class="FormSection-info-title">Если вы тоже решили <br> «а почему бы и нет»</h2>
+            <ul class="FormSection-info-items">
+                <li class="FormSection-info-item">Можно заказать много</li>
+                <li class="FormSection-info-item">Доступ возможен через северный интерфейс</li>
+                <li class="FormSection-info-item">Можно просто поболтать</li>
+            </ul>
+        </div>
+        <form action="#" class="FormSection-form" id="mainForm">
+            <div class="FormSection-form-section">
+            <input type="text" name="name" class="FormSection-form-input" id="userName" placeholder="Имя">
+            <input type="number" name="phone" class="FormSection-form-input" id="userPhone" placeholder="Телефон">
+            </div>
+            <div class="FormSection-form-consent">
+                <input type="checkbox" name="consent" id="userConsent" class="FormSection-form-consentInput visually-hidden">
+                <label for="userConsent" class="FormSection-form-consentLabel">
+                    <span class="FormSection-form-customCheckbox"></span>
+                    Согласен(-на) на обработку чего угодно — лишь бы форма работала
+                </label>
+            </div>
+            <div class="FormSection-form-errors">
+                <!-- сообщения об ошибках -->
+            </div>
+            <div class="FormSection-form-success">
+                <!-- сообщение об успешной отправке -->
+            </div>
+            <button type="submit" class="FormSection-form-button">Отправить 
+                <svg class="FormSection-form-buttonIcon" width="48" height="20" viewBox="0 0 48 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34 0V0C34 5.52285 38.4772 10 44 10V10"  stroke-width="2"/>
+                    <path d="M33.875 20V20C33.875 14.4772 38.3522 10 43.875 10H44H-10" stroke-width="2"/>
+                </svg>
+            </button>
+        </form>
+    </section>
+    
+    <section class="contacts">
+        <div class="contacts__content">
+            <h2 class="contacts__content__title">Контакты</h2>
+            <div class="contacts__content__list">
+                <section class="contacts__content__list__item">
+                    <span class="contacts__content__list__item__icon adres" aria-hidden="true"></span>
+                    <span class="contacts__content__list__item__text">Офис, где делают странные, но симпатичные вещи</span>
+                </section>
+                <section class="contacts__content__list__item">
+                    <span class="contacts__content__list__item__icon time" aria-hidden="true"></span>
+                    <span class="contacts__content__list__item__text">Пн-Пт с 10:00 до 20:00</span>
+                </section>
+                <section class="contacts__content__list__links">
+                    <div class="contacts__content__list__item">
+                        <span class="contacts__content__list__item__icon tel" aria-hidden="true"></span>
+                        <a class="contacts__content__list__item__link" href="tel:+78004444444">8 (800) 444 44 44</a>
+                    </div>
+                    <div class="contacts__content__list__item">
+                        <span class="contacts__content__list__item__icon tel"  aria-hidden="true"></span>
+                        <a class="contacts__content__list__item__link" href="tel:+78008888888">8 (800) 888 88 88</a>
+                    </div>
+                </section>
+                <section class="contacts__content__list__item">
+                    <span class="contacts__content__list__item__icon mail" aria-hidden="true"></span>
+                    <a class="contacts__content__list__item__link" href="mailto:example@mail.ru">example@mail.ru</a>
+                </section>
+            </div>
+            <button class="contacts__content__button">
+                <span class="contacts__content__button__text">
+                    Связaться</span>
+                <svg class="contacts__content__button__icon" width="48" height="20" viewBox="0 0 48 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34 0V0C34 5.52285 38.4772 10 44 10V10" stroke="#1F8B48" stroke-width="2"/>
+                    <path d="M33.875 20V20C33.875 14.4772 38.3522 10 43.875 10H44H-10" stroke="#1F8B48" stroke-width="2"/>
+                </svg>
+            </button>
+        </div>
+        <div class="contacts__map">
+            <iframe class="contacts__map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A8637a9a09bf11e79495d98ce967c75c649b808a971cbf0bd5abf6dd4972b19ee&amp;source=constructor" 
+                
+                frameborder="0">
+            </iframe>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-arrea">
+            <section class="footer-items">
+                <a class="footer-item" href="#">О системе</a>
+                <a class="footer-item" href="#">Архитектура</a>
+                <a class="footer-item" href="#">Для своих</a>
+                <a class="footer-item" href="#">Состав</a>
+                <a class="footer-item" href="#">Отзывы</a>
+            </section>
+            <hr class="footer-line">
+            <section class="footer-info">
+                <span class="footer-info-text">Коллаген &#169; 2025</span>
+                <a href="#">Политика обработки чего-то личного</a>
+            </section>
+        </div>
+        <img class="footer-logo" src="./assets/icons/logo.svg" alt="логотип">
+    </footer>
+    </main>
+    <script src="./assets/scripts/index.js"></script>
+</body>
+</html>

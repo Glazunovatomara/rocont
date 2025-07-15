@@ -1,0 +1,14 @@
+@use "base/fonts";
+@use "abstracts/variables";
+@use "abstracts/mixin";
+
+@use "components/header";
+@use "components/main";
+@use "components/section-hero";
+@use "components/section-slider";
+@use "components/section-form";
+@use "components/section-contacts";
+@use "components/footer";
+
+// "  sass --watch assets/sass/app.scss assets/styles/style.css  "
+// команда для быстрой вставки в терминал - запускает компиляцию кода SASS в CSS, терминал должен оставаться открытым
