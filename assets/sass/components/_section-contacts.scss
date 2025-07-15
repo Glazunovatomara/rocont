@@ -95,16 +95,16 @@
     background-position: center;
 }
 .adres {
-    background-image: url(/assets/icons/contact_adres.svg);
+    background-image: url('../../icons/contact_adres.svg');
 }
 .time {
-    background-image: url(/assets/icons/contact_time.svg);
+    background-image: url('../../icons/contact_time.svg');
 }
 .tel {
-    background-image: url(/assets/icons/contact_tel.svg);
+    background-image: url('../../icons/contact_tel.svg');
 }
 .mail {
-    background-image: url(/assets/icons/contact_mail.svg);
+    background-image: url('../../icons/contact_mail.svg');
 }
 .contacts__content__list__links {
     display: flex;
