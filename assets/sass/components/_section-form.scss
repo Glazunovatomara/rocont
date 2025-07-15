@@ -109,13 +109,17 @@
     &::placeholder {
         @include mixin.text-mini;
     }
+
+    @media screen and (max-width:320px) {
+        padding: 8px 20px;
+    }
 }
 .FormSection-form-input:focus {
     outline: none;
     box-shadow: 0 0 0 2px variables.$green;
 }
 .FormSection-form-input.is-invalid {
-    border: 2px solid #dc3545;
+    border: 2px solid variables.$error;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -194,11 +198,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .FormSection-form-consentInput.is-invalid + .FormSection-form-consentLabel .FormSection-form-customCheckbox {
-    border-color: #ff5b6b;
+    border-color: variables.$error;
 }
 .FormSection-form-errors{
     @include mixin.subtext;
-    color: #ffa0a9;
+    color: variables.$error-light;
 }
 .FormSection-form-success {
     @include mixin.subtext;

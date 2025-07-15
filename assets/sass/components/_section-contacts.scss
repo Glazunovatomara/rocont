@@ -24,6 +24,7 @@
 
     @media screen and (max-width:960px) {
         padding: 48px;
+        gap:24px;
     }
     @media screen and (max-width:640px) {
         padding: 24px;
@@ -47,10 +48,8 @@
 }
 .contacts__map__frame {
     width: 100%;
-    height: 435px;
-    @media screen and (max-width:960px) {
-        height: 359px;
-    }
+    height: 100%;
+
     @media screen and (max-width:640px) {
         height: 250px;
     }
@@ -73,6 +72,8 @@
 }
 .contacts__content__list__item,
 .contacts__content__list__item__link {
+    @include mixin.text;
+    font-weight: normal;
     color: variables.$black;
 }
 .contacts__content__list__item__link {
@@ -109,13 +110,14 @@
 .contacts__content__list__links {
     display: flex;
     justify-content: space-between;
-    max-width: 320px;
+    max-width: 420px;
     width: 100%;
 
-    @media screen and (max-width:320px) {
+    @media screen and (max-width:889px) {
         flex-wrap: wrap;
         gap: 16px;
     }
+
 }
 .contacts__content__button {
     @include mixin.button;
