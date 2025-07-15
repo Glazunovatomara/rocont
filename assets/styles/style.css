@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Gropled";
-  src: url("/assets/fonts/Gropled-Bold.otf");
+  src: url("../fonts/Gropled-Bold.otf");
 }
 @font-face {
   font-family: "TildaSans-Regular";
-  src: url("/assets/fonts/TildaSans-Regular.ttf");
+  src: url("../fonts/TildaSans-Regular.ttf");
 }
 @font-face {
   font-family: "TildaSans-Medium";
-  src: url("/assets/fonts/TildaSans-Medium.ttf");
+  src: url("../fonts/TildaSans-Medium.ttf");
 }
 .header {
   position: relative;
@@ -177,6 +177,7 @@ a {
 .main {
   background-color: #F6F6F6;
   padding: 8px 10px 0;
+  overflow: hidden;
 }
 
 .section-hero {
@@ -715,7 +716,7 @@ a {
 .FormSection-info-item::before {
   width: 24px;
   height: 24px;
-  content: url(/assets/icons/arrow.svg);
+  content: url("../icons/arrow.svg");
   border: none;
   border-radius: 50%;
   background-color: white;
@@ -841,6 +842,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   padding-bottom: 8px;
+  cursor: pointer;
 }
 @media screen and (max-width: 640px) {
   .FormSection-form-consentLabel {
@@ -877,7 +879,7 @@ input[type=number]::-webkit-inner-spin-button {
   border: none;
   width: 24px;
   height: 24px;
-  background-image: url(/assets/icons/consent.svg);
+  background-image: url("../icons/consent.svg");
 }
 
 .FormSection-form-consentInput.is-invalid + .FormSection-form-consentLabel .FormSection-form-customCheckbox {
@@ -1027,19 +1029,19 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .adres {
-  background-image: url(/assets/icons/contact_adres.svg);
+  background-image: url("../icons/contact_adres.svg");
 }
 
 .time {
-  background-image: url(/assets/icons/contact_time.svg);
+  background-image: url("../icons/contact_time.svg");
 }
 
 .tel {
-  background-image: url(/assets/icons/contact_tel.svg);
+  background-image: url("../icons/contact_tel.svg");
 }
 
 .mail {
-  background-image: url(/assets/icons/contact_mail.svg);
+  background-image: url("../icons/contact_mail.svg");
 }
 
 .contacts__content__list__links {
