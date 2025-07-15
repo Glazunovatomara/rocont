@@ -99,7 +99,6 @@
     border-radius: 20px;
     background-color: variables.$white;
     transform: translateX(calc(100vw - 10px));
-    opacity: 0;
     transition: transform 0.25s ease-out;
     z-index: 10;
 
@@ -107,7 +106,6 @@
 }
 .header-menu-checkbox:checked ~ .header-nav {
   transform: translateX(0);
-  opacity: 1;
 }
 .nav-items {
   display: flex;
