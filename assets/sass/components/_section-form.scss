@@ -68,7 +68,7 @@
 .FormSection-info-item::before {
     width: 24px;
     height: 24px;
-    content: url('../../icons/arrow.svg');
+    content: url('../icons/arrow.svg');
     border: none;
     border-radius: 50%;
     background-color: variables.$white;
@@ -153,6 +153,7 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     padding-bottom: 8px;
+    cursor: pointer;
 
     @media screen and (max-width:640px) {
         padding-bottom: 16px;
@@ -189,7 +190,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border: none;
     width: 24px;
     height: 24px;
-    background-image: url('../../icons/consent.svg');
+    background-image: url('../icons/consent.svg');
 }
 
 .FormSection-form-consentInput.is-invalid + .FormSection-form-consentLabel .FormSection-form-customCheckbox {
