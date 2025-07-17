@@ -86,7 +86,7 @@
         max-width: 572px;
     }
 }
-.FormSection-form-section {
+.FormSection-form-inputsGroup {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -163,7 +163,7 @@ input[type="number"]::-webkit-inner-spin-button {
         padding-bottom: 16px;
     }
 }
-
+.FormSection-form-inputsGroup > .visually-hidden,
 .FormSection-form-consentInput.visually-hidden {
     position: absolute;
     width: 1px;
@@ -173,6 +173,7 @@ input[type="number"]::-webkit-inner-spin-button {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+    white-space: nowrap;
 }
 
 .FormSection-form-customCheckbox {

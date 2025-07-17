@@ -64,20 +64,21 @@
                     background-repeat: no-repeat;
                     background-position: center;
                 }
+
+                &-group {
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 420px;
+                    width: 100%;
+                
+                    @media screen and (max-width:889px) {
+                        flex-wrap: wrap;
+                        gap: 16px;
+                    }
+                }
             }
         }
 
-        &-list-links {
-            display: flex;
-            justify-content: space-between;
-            max-width: 420px;
-            width: 100%;
-        
-            @media screen and (max-width:889px) {
-                flex-wrap: wrap;
-                gap: 16px;
-            }
-        }
         &-button {
             @include mixin.button;
             gap: 8px;
