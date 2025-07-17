@@ -16,4 +16,7 @@ a {
     background-color: variables.$grey;
     padding: 8px 10px 0;
     overflow: hidden;
+    background-image: url(../icons/background-icon.svg);
+    background-repeat: repeat;
+    background-size: 120% auto;
 }
